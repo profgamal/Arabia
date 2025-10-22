@@ -1,0 +1,190 @@
+.start-screen {
+    background: linear-gradient(135deg, #8B4513, #654321);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(218, 165, 32, 0.3);
+    border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.start-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FFD700, #DAA520);
+}
+
+.start-screen h1 {
+    color: #FFD700;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 15px;
+    background: linear-gradient(45deg, #FFD700, #DAA520);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.start-screen h1::after {
+    content: '🎯';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.5em;
+    -webkit-text-fill-color: initial;
+}
+
+.contestant-form {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(160, 82, 45, 0.2));
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(218, 165, 32, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.contestant-form::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    border-radius: 17px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #2c3e50;
+    text-align: right;
+    direction: rtl;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+/* تخصيص حقل رقم الجوال */
+#contestant-phone {
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* إضافة أيقونة الهاتف */
+.form-group {
+    position: relative;
+}
+
+.form-group input[type="tel"] {
+    padding-right: 40px;
+}
+
+.form-group label[for="contestant-phone"]::after {
+    content: '📱';
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    font-size: 1.2em;
+}
+
+/* تحسين مظهر placeholder */
+.form-group input::placeholder {
+    color: #bdc3c7;
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+.form-group input::placeholder {
+    color: #95a5a6;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background: #fff;
+}
+
+.start-screen button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.start-screen button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.start-screen button::after {
+    content: '🎮';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* تأثيرات حركية */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.quiz-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+    color: #f1c40f;
+}
